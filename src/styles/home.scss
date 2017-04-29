@@ -1,0 +1,17 @@
+$bg-color: rgb(239, 237, 242);
+
+@mixin setHeightAndPadding {
+  height: 500px;
+  border-radius: 2px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.mdPreview {
+  @include setHeightAndPadding;
+  background-color: $bg-color;
+}
+
+.form-control.inputTextArea {
+  @include setHeightAndPadding;
+}

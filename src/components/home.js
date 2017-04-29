@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 
 import * as layoutActions from '../actions/layoutActions';
 
+import '../styles/home.scss';
+
 class HomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -15,12 +17,14 @@ class HomeComponent extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="row">
         <div className="col-xs-12 col-md-6">
-          <input type="text" onChange={this.parseMarkdown.bind(this)} />
+          <textarea className="form-control inputTextArea" onChange={this.parseMarkdown.bind(this)} placeholder="Enter your markdown syntax here" />
         </div>
         <div className="col-xs-12 col-md-6">
-          <div id="mdPreview" dangerouslySetInnerHTML={{__html: this.props.parsedMarkdown}} />
+          <div className="mdPreview">
+            <div dangerouslySetInnerHTML={{__html: this.props.parsedMarkdown}} />
+          </div>
         </div>
       </div>
     );
@@ -29,7 +33,7 @@ class HomeComponent extends React.Component {
 
 HomeComponent.propTypes = {
   parseMdSyntax: PropTypes.func,
-  parsedMarkdown: PropTypes.element
+  parsedMarkdown: PropTypes.string
 };
 
 const mapStateToProps = (state) => {
