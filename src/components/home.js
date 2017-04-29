@@ -34,7 +34,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  parseMdSyntax: mdVal => dispatch(layoutActions.parseMdSyntax(mdVal))
-}
+  return {
+    parseMdSyntax: mdVal => dispatch(layoutActions.parseMdSyntax(mdVal))
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeComponent);
