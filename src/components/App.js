@@ -7,12 +7,7 @@ const App = (props) => {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Books</a>
-          </div>
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav">
-
-            </ul>
+            <a className="navbar-brand" href="#">Markdown Previewer</a>
           </div>
         </div>
       </nav>
