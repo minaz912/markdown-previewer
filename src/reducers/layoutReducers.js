@@ -1,7 +1,7 @@
 import parseMarkdown from '../utils/parseMarkdown';
 
 let initialState = {
-  parseMarkdown: ''
+  parsedMarkdown: 'Result appears here'
 };
 
 export default (state = initialState, action) => {
